@@ -1,0 +1,51 @@
+{
+  "name": "perplexport",
+  "version": "1.0.0",
+  "description": "Export Perplexity conversations as markdown files",
+  "main": "dist/index.js",
+  "bin": {
+    "perplexport": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "serve": "ts-node src/server.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "perplexity",
+    "export",
+    "markdown",
+    "cli",
+    "conversation",
+    "backup",
+    "automation"
+  ],
+  "author": "Leonid Shevtsov <leonid@shevtsov.me>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/express": "^5.0.6",
+    "commander": "^11.0.0",
+    "express": "^5.2.1",
+    "puppeteer": "^24.9.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leonid-shevtsov/perplexport.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leonid-shevtsov/perplexport/issues"
+  },
+  "homepage": "https://github.com/leonid-shevtsov/perplexport#readme"
+}
